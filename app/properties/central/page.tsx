@@ -85,7 +85,7 @@ export default function MoonlightPage() {
                   Enquire
                 </Link>
                 <Link
-                  href="/VOXA_BROCHURE.pdf" 
+                  href="/VOXA_BROCHURE.pdf"
                   target="_blank"
                   className="inline-flex items-center gap-2 border border-neutral-700 hover:border-neutral-500 text-neutral-300 text-sm px-4 py-2.5 rounded-md transition-colors"
                 >

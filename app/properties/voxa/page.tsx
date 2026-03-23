@@ -1,4 +1,3 @@
-
 // import Image from "next/image";
 // import voxaCardImg from "../../assets/voxa-card-img.jpg";
 // import LightGallery from "../../components/LightGallery";
@@ -33,7 +32,6 @@
 // import img29 from "../../assets/images/voxa/OutdoorKidsArea-PP.jpeg";
 // import img30 from "../../assets/images/voxa/PantheonJVT_EntranceRoadShot-PP.jpeg"
 
-
 // type Property = {
 //   id: string;
 //   name: string;
@@ -66,7 +64,7 @@
 // const galleryImages: string[] = [
 //     img1.src,
 //     img2.src,
-//     img3.src,    
+//     img3.src,
 //     // img4.src,
 //     img5.src,
 //     img6.src,
@@ -87,9 +85,9 @@
 //     img21.src,
 //     img22.src,
 //     img23.src,
-//     img24.src,    
+//     img24.src,
 //     img25.src,
-//     img26.src,    
+//     img26.src,
 //     img27.src,
 //     img28.src,
 //     img29.src,
@@ -354,7 +352,6 @@
 //   );
 // }
 
-
 import Image from "next/image";
 import voxaCardImg from "../../assets/voxa-card-img.jpg";
 import LightGallery from "../../components/LightGallery";
@@ -374,7 +371,6 @@ import img13 from "../../assets/images/voxa/JVT-PENTHOUSE-MASTER-BATHROOM.jpg";
 import img14 from "../../assets/images/voxa/JVT-STUDIO-1.jpg";
 import img15 from "../../assets/images/voxa/LobbyCloseup-Voxa-PP.jpg";
 import Link from "next/link";
-
 
 type Property = {
   id: string;
@@ -405,16 +401,26 @@ const voxa: Property = {
 };
 
 const galleryImages: string[] = [
-  img1.src, img2.src, img3.src, img4.src, img5.src, img6.src, img7.src,
-  img8.src, img9.src, img10.src, img11.src, img12.src, img13.src, img14.src,
-  img15.src
+  img1.src,
+  img2.src,
+  img3.src,
+  img4.src,
+  img5.src,
+  img6.src,
+  img7.src,
+  img8.src,
+  img9.src,
+  img10.src,
+  img11.src,
+  img12.src,
+  img13.src,
+  img14.src,
+  img15.src,
 ];
-
 
 export default function VoxaPage() {
   return (
     <main className="min-h-screen bg-[#080808] text-white pt-20">
-
       {/* ── HERO: Title + meta bar ── */}
       <section className="border-b border-neutral-800/60">
         <div className="max-w-7xl mx-auto px-6 pt-10 pb-6">
@@ -436,8 +442,12 @@ export default function VoxaPage() {
             {/* Price + CTA */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
               <div className="text-right">
-                <p className="text-xs text-neutral-500 uppercase tracking-widest">Starting from</p>
-                <p className="text-3xl font-semibold text-[#cbb58b]">{voxa.price}</p>
+                <p className="text-xs text-neutral-500 uppercase tracking-widest">
+                  Starting from
+                </p>
+                <p className="text-3xl font-semibold text-[#cbb58b]">
+                  {voxa.price}
+                </p>
               </div>
               <div className="flex gap-2">
                 <Link
@@ -447,7 +457,7 @@ export default function VoxaPage() {
                   Enquire
                 </Link>
                 <Link
-                  href="/VOXA_BROCHURE.pdf" 
+                  href="/VOXA_BROCHURE.pdf"
                   target="_blank"
                   className="inline-flex items-center gap-2 border border-neutral-700 hover:border-neutral-500 text-neutral-300 text-sm px-4 py-2.5 rounded-md transition-colors"
                 >
@@ -466,7 +476,9 @@ export default function VoxaPage() {
               { label: "Payment plan", value: "65 / 35%" },
             ].map(({ label, value }) => (
               <div key={label} className="flex items-center gap-2">
-                <span className="text-neutral-500 text-xs uppercase tracking-widest">{label}</span>
+                <span className="text-neutral-500 text-xs uppercase tracking-widest">
+                  {label}
+                </span>
                 <span className="w-px h-3 bg-neutral-700" />
                 <span className="text-neutral-200">{value}</span>
               </div>
@@ -483,31 +495,44 @@ export default function VoxaPage() {
       {/* ── CONTENT ── */}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-
           {/* Left / Main */}
           <article className="lg:col-span-2 space-y-10">
-
             {/* Overview */}
             <div className="prose prose-invert max-w-none text-neutral-300 prose-headings:text-white prose-a:text-[#cbb58b]">
               <h2 className="text-2xl font-serif">Project Overview</h2>
 
               <p>
-                <strong>VOXA by Pantheon</strong> is a landmark residential development
-                in Jumeirah Village Triangle featuring <strong>24+ curated amenities</strong>,
-                a private <strong>artificial beach</strong>, a <strong>pet-friendly park</strong>,
-                and fully furnished smart-home apartments.
+                <strong>VOXA by Pantheon</strong> is a landmark residential
+                development in Jumeirah Village Triangle featuring{" "}
+                <strong>24+ curated amenities</strong>, a private{" "}
+                <strong>artificial beach</strong>, a{" "}
+                <strong>pet-friendly park</strong>, and fully furnished
+                smart-home apartments.
               </p>
 
               <div className="not-prose grid grid-cols-2 md:grid-cols-4 gap-3 my-6">
                 {[
-                  { icon: "🏖️", title: "Artificial Beach", sub: "Private shore" },
+                  {
+                    icon: "🏖️",
+                    title: "Artificial Beach",
+                    sub: "Private shore",
+                  },
                   { icon: "🐶", title: "Pet Park", sub: "Dogs welcome" },
-                  { icon: "🏋️", title: "24+ Amenities", sub: "Pools · Gym · Spa" },
+                  {
+                    icon: "🏋️",
+                    title: "24+ Amenities",
+                    sub: "Pools · Gym · Spa",
+                  },
                   { icon: "🏠", title: "Smart Home", sub: "Fully furnished" },
                 ].map(({ icon, title, sub }) => (
-                  <div key={title} className="bg-neutral-900 border border-neutral-800 rounded-lg p-4 text-center">
+                  <div
+                    key={title}
+                    className="bg-neutral-900 border border-neutral-800 rounded-lg p-4 text-center"
+                  >
                     <div className="text-2xl mb-1">{icon}</div>
-                    <div className="text-sm font-medium text-white">{title}</div>
+                    <div className="text-sm font-medium text-white">
+                      {title}
+                    </div>
                     <div className="text-xs text-neutral-500 mt-0.5">{sub}</div>
                   </div>
                 ))}
@@ -521,7 +546,10 @@ export default function VoxaPage() {
                   ["Dubai Airport", "30 min"],
                   ["JBR Beach", "25 min"],
                 ].map(([place, time]) => (
-                  <div key={place} className="flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded px-3 py-2 text-sm">
+                  <div
+                    key={place}
+                    className="flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded px-3 py-2 text-sm"
+                  >
                     <span className="text-[#cbb58b] font-semibold">{time}</span>
                     <span className="text-neutral-400">{place}</span>
                   </div>
@@ -545,7 +573,10 @@ export default function VoxaPage() {
                       ["2 BHK", "1,579,900 AED", "780.06 sqft"],
                       ["3 BHK", "2,529,900 AED", "1,293.39 sqft"],
                     ].map(([type, price, size]) => (
-                      <tr key={type} className="text-neutral-300 hover:bg-neutral-900/50 transition-colors">
+                      <tr
+                        key={type}
+                        className="text-neutral-300 hover:bg-neutral-900/50 transition-colors"
+                      >
                         <td className="px-4 py-3 font-medium">{type}</td>
                         <td className="px-4 py-3 text-[#cbb58b]">{price}</td>
                         <td className="px-4 py-3 text-neutral-500">{size}</td>
@@ -556,15 +587,24 @@ export default function VoxaPage() {
               </div>
 
               <p className="mt-6">
-                ✅ Units can be reserved for 10–15 days with a <strong>20,000 AED</strong> holding deposit.
-                Available views: <strong>Marina</strong> &amp; <strong>Golf Course</strong>.
+                ✅ Units can be reserved for 10–15 days with a{" "}
+                <strong>20,000 AED</strong> holding deposit. Available views:{" "}
+                <strong>Marina</strong> &amp; <strong>Golf Course</strong>.
               </p>
 
               <div className="flex flex-wrap gap-4 mt-4">
-                <a href="https://maps.app.goo.gl/Pq9aCN6ReB9WQ5b5A?g_st=ic" target="_blank" rel="noreferrer">
+                <a
+                  href="https://maps.app.goo.gl/Pq9aCN6ReB9WQ5b5A?g_st=ic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   📍 View on map
                 </a>
-                <a href="https://storage.net-fs.com/hosting/5993079/77/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://storage.net-fs.com/hosting/5993079/77/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   ✨ 360° walkthrough
                 </a>
               </div>
@@ -575,7 +615,9 @@ export default function VoxaPage() {
           <aside className="space-y-5">
             {/* Quick Facts */}
             <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
-              <h4 className="text-base font-semibold uppercase tracking-widest text-neutral-400 mb-4">Quick Facts</h4>
+              <h4 className="text-base font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+                Quick Facts
+              </h4>
               <dl className="space-y-3 text-sm">
                 {[
                   ["Project", voxa.name],
@@ -585,7 +627,10 @@ export default function VoxaPage() {
                   ["Service charge", "19 AED / sqft"],
                   ["Furnishing", "Fully furnished"],
                 ].map(([label, value]) => (
-                  <div key={label} className="flex justify-between gap-4 border-b border-neutral-800 pb-2 last:border-0 last:pb-0">
+                  <div
+                    key={label}
+                    className="flex justify-between gap-4 border-b border-neutral-800 pb-2 last:border-0 last:pb-0"
+                  >
                     <dt className="text-neutral-500">{label}</dt>
                     <dd className="text-neutral-200 text-right">{value}</dd>
                   </div>
@@ -595,7 +640,9 @@ export default function VoxaPage() {
 
             {/* Payment Plan */}
             <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
-              <h4 className="text-base font-semibold uppercase tracking-widest text-neutral-400 mb-4">Payment Plan</h4>
+              <h4 className="text-base font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+                Payment Plan
+              </h4>
               <div className="space-y-3">
                 {[
                   { pct: "20%", label: "Down payment + 4% DLD" },
@@ -604,20 +651,30 @@ export default function VoxaPage() {
                   { pct: "35%", label: "Post-handover over 3 years" },
                 ].map(({ pct, label }) => (
                   <div key={pct} className="flex items-center gap-3">
-                    <span className="text-[#cbb58b] font-semibold text-lg w-12 shrink-0">{pct}</span>
+                    <span className="text-[#cbb58b] font-semibold text-lg w-12 shrink-0">
+                      {pct}
+                    </span>
                     <span className="text-neutral-400 text-sm">{label}</span>
                   </div>
                 ))}
               </div>
               <div className="mt-4 rounded-md bg-neutral-800 px-4 py-3 text-xs text-neutral-400">
-                Reserve a unit for 10–15 days with <span className="text-white font-medium">20,000 AED</span>
+                Reserve a unit for 10–15 days with{" "}
+                <span className="text-white font-medium">20,000 AED</span>
               </div>
             </div>
 
             {/* Contact */}
-            <div id="contact" className="bg-[#cbb58b]/5 border border-[#cbb58b]/20 rounded-xl p-6">
-              <h4 className="text-base font-semibold text-[#cbb58b] mb-1">Interested?</h4>
-              <p className="text-sm text-neutral-400 mb-4">Our sales team will get back to you within 24 hours.</p>
+            <div
+              id="contact"
+              className="bg-[#cbb58b]/5 border border-[#cbb58b]/20 rounded-xl p-6"
+            >
+              <h4 className="text-base font-semibold text-[#cbb58b] mb-1">
+                Interested?
+              </h4>
+              <p className="text-sm text-neutral-400 mb-4">
+                Our sales team will get back to you within 24 hours.
+              </p>
               <Link
                 href="/contact-us"
                 className="w-full inline-flex items-center justify-center gap-2 bg-[#cbb58b] hover:bg-[#b9a075] text-black font-semibold text-sm px-4 py-3 rounded-md transition-colors"

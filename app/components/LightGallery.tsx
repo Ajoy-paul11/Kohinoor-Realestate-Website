@@ -117,7 +117,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
@@ -137,11 +136,17 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
   const openAt = useCallback((i: number) => setLightboxIndex(i), []);
   const close = useCallback(() => setLightboxIndex(null), []);
   const prev = useCallback(
-    () => setLightboxIndex((s) => (s === null || s === 0 ? images.length - 1 : s - 1)),
+    () =>
+      setLightboxIndex((s) =>
+        s === null || s === 0 ? images.length - 1 : s - 1
+      ),
     [images.length]
   );
   const next = useCallback(
-    () => setLightboxIndex((s) => (s === null || s === images.length - 1 ? 0 : s + 1)),
+    () =>
+      setLightboxIndex((s) =>
+        s === null || s === images.length - 1 ? 0 : s + 1
+      ),
     [images.length]
   );
 
@@ -158,7 +163,9 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
 
   useEffect(() => {
     document.body.style.overflow = lightboxIndex !== null ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [lightboxIndex]);
 
   return (
@@ -170,12 +177,14 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
           return (
             <button
               key={i}
-              onClick={() => isLast ? setShowAll(true) : openAt(i)}
+              onClick={() => (isLast ? setShowAll(true) : openAt(i))}
               className={`group relative overflow-hidden hover:cursor-pointer ${
                 i === 0 ? " row-span-2" : ""
               } `}
               style={i === 0 ? { aspectRatio: "unset", height: "auto" } : {}}
-              aria-label={isLast ? `Show ${remaining} more images` : `View image ${i + 1}`}
+              aria-label={
+                isLast ? `Show ${remaining} more images` : `View image ${i + 1}`
+              }
             >
               <img
                 src={src}
@@ -188,8 +197,12 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
               {/* "Show more" tile */}
               {isLast && (
                 <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-1">
-                  <span className="text-white text-3xl font-light">+{remaining}</span>
-                  <span className="text-neutral-300 text-xs tracking-widest uppercase">more photos</span>
+                  <span className="text-white text-3xl font-light">
+                    +{remaining}
+                  </span>
+                  <span className="text-neutral-300 text-xs tracking-widest uppercase">
+                    more photos
+                  </span>
                 </div>
               )}
 
@@ -197,8 +210,18 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
               {!isLast && (
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-2">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15zM10.5 7.5v6m-3-3h6" />
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={1.5}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15zM10.5 7.5v6m-3-3h6"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -216,10 +239,19 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
             className="group inline-flex items-center gap-2 border border-neutral-700 hover:border-[#cbb58b] text-neutral-400 hover:text-[#cbb58b] text-sm px-5 py-2.5 rounded-md transition-colors duration-200"
           >
             <svg
-              className={`w-4 h-4 transition-transform duration-300 ${showAll ? "rotate-180" : ""}`}
-              fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"
+              className={`w-4 h-4 transition-transform duration-300 ${
+                showAll ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
             </svg>
             {showAll ? "Show less" : `View all ${images.length} photos`}
           </button>
@@ -240,14 +272,25 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
             className="absolute top-5 right-5 z-10 text-neutral-400 hover:text-white transition-colors"
             aria-label="Close"
           >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
 
           {/* Counter */}
           <div className="absolute top-5 left-5 z-10 text-sm text-neutral-500 font-mono tracking-widest">
-            {String(lightboxIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+            {String(lightboxIndex + 1).padStart(2, "0")} /{" "}
+            {String(images.length).padStart(2, "0")}
           </div>
 
           {/* Prev */}
@@ -256,8 +299,18 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
             className="absolute left-4 md:left-8 z-10 text-neutral-400 hover:text-white transition-colors p-2"
             aria-label="Previous"
           >
-            <svg className="w-9 h-9" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            <svg
+              className="w-9 h-9"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
             </svg>
           </button>
 
@@ -278,8 +331,18 @@ export default function LightGallery({ images, initialCount = 6 }: Props) {
             className="absolute right-4 md:right-8 z-10 text-neutral-400 hover:text-white transition-colors p-2"
             aria-label="Next"
           >
-            <svg className="w-9 h-9" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            <svg
+              className="w-9 h-9"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
             </svg>
           </button>
 

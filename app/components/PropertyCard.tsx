@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Bed, Bath, Square } from "lucide-react";
 import { Button } from "../components/ui/button";
-import  { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface Property {
   id: number;
@@ -46,7 +46,7 @@ const PropertyCard = ({ property, index }: PropertyCardProps) => {
 
       {/* CONTENT */}
       <div className=" relative flex flex-col md:flex-row h-full p-3 lg:p-10 w-full items-end justify-end gap-8 lg:gap-0">
-      <div className="absolute inset-0 bg-transparent z-0"></div>
+        <div className="absolute inset-0 bg-transparent z-0"></div>
         <div className=" flex flex-col flex-wrap w-full">
           <div className=" max-w-full ">
             <div className=" flex items-center">
@@ -66,7 +66,9 @@ const PropertyCard = ({ property, index }: PropertyCardProps) => {
             </div>
           </div>
           <div className=" max-w-full">
-            <h2 className=" text-2xl lg:text-3xl font-normal">{property.name}</h2>
+            <h2 className=" text-2xl lg:text-3xl font-normal">
+              {property.name}
+            </h2>
           </div>
           <div className=" flex flex-col ">
             <div className=" mt-5 max-w-full">
@@ -94,7 +96,7 @@ const PropertyCard = ({ property, index }: PropertyCardProps) => {
                   </span>
                 </li>
                 <li className=" flex mx-2">
-                  <span >
+                  <span>
                     <Square
                       className=" text-[#d8bc30] inline-block mr-2"
                       size={16}
@@ -110,7 +112,10 @@ const PropertyCard = ({ property, index }: PropertyCardProps) => {
         </div>
         <div className=" flex md:flex-col items-center justify-between lg:items-end gap-6 w-full md:-mr-2 lg:mr-0">
           <div className=" max-w-full text-center lg:text-right">
-            <h2 className=" text-xl lg:text-3xl font-normal"> {property.price}</h2>
+            <h2 className=" text-xl lg:text-3xl font-normal">
+              {" "}
+              {property.price}
+            </h2>
           </div>
           <div className=" text-right">
             <Button className=" px-2 py-3 lg:px-4 lg:py-6 bg-linear-to-r from-[#d8bc30] to-[#d8bc30] hover:from-[#d8bc30]/70 hover:to-[#d8bc30]/70 text-white text-sm lg:text-base font-normal tracking-wide rounded-xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/50 hover:scale-[1.02]">

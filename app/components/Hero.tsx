@@ -21,7 +21,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative w-full min-h-screen text-white overflow-hidden">
+    <section
+      id="home"
+      className="relative w-full min-h-screen text-white overflow-hidden"
+    >
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -50,7 +53,7 @@ const Hero = () => {
                   Welcome to
                 </h2>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -74,7 +77,7 @@ const Hero = () => {
                   Realestate
                 </h1>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
