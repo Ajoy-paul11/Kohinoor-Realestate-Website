@@ -5,6 +5,7 @@ import voxaImg from "../assets/voxa-card-img.jpg";
 import aquariseImg from "../assets/aquarise1.webp";
 import moonlightImg from "../assets/moonlight1.jpg";
 import centralImg from "../assets/central-1.webp";
+import skybladeImg from "../assets/skyblade.jpg";
 
 interface Property {
   id: number;
@@ -78,6 +79,20 @@ const properties: Property[] = [
     city: "Dubai",
     projectUrl: "/central",
   },
+  {
+    id: 5,
+  name: "Binghatti Skyblade",
+  location: "Downtown Dubai, Dubai, Downtown",
+  price: "AED 1,670,000",
+  image: skybladeImg.src,
+  beds: 3,
+  baths: 3,
+  sqft: 462,
+  type: "sale",
+  category: "Apartment",
+  city: "Dubai",
+  projectUrl: "/skyblade",
+  }
 ];
 
 type SearchParams = {

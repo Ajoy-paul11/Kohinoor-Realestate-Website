@@ -9,9 +9,9 @@ import logo from "../../public/kohinoor.png";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "about-us" },
-  { name: "Properties", href: "properties" },
-  { name: "Contact Us", href: "contact-us" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Properties", href: "/properties" },
+  { name: "Contact Us", href: "/  contact-us" },
 ];
 
 const Navbar = () => {
@@ -35,13 +35,13 @@ const Navbar = () => {
       <div className="max-w-450 mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img
               src={logo.src}
               alt="Luxury Estates Logo"
               className=" h-12 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
