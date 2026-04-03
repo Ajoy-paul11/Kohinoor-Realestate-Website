@@ -21,12 +21,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    details: "+1 (555) 123-4567",
+    details: "+97142957104",
   },
   {
     icon: Mail,
     title: "Email Us",
-    details: "kohinoorrealty@gmail.com",
+    details: "info@kohinoorrealestate.ae",
   },
   {
     icon: Clock,
