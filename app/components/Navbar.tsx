@@ -11,7 +11,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
   { name: "Properties", href: "/properties" },
-  { name: "Contact Us", href: "/  contact-us" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 
 const Navbar = () => {

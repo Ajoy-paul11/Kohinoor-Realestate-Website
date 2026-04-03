@@ -6,6 +6,7 @@ import aquariseImg from "../assets/aquarise1.webp";
 import moonlightImg from "../assets/moonlight1.jpg";
 import centralImg from "../assets/central-1.webp";
 import skybladeImg from "../assets/skyblade.jpg";
+import starLightImg from "../assets/starlight.webp";
 
 interface Property {
   id: number;
@@ -92,6 +93,20 @@ const properties: Property[] = [
   category: "Apartment",
   city: "Dubai",
   projectUrl: "/skyblade",
+  },
+  {
+    id: 6,
+  name: "Binghatti Starlight",
+  location: "Al Jaddaf, Dubai, Al Jaddaf",
+  price: "AED 850,000",
+  image: starLightImg.src,
+  beds: 2,
+  baths: 2,
+  sqft: 415,
+  type: "sale",
+  category: "Apartment",
+  city: "Dubai",
+  projectUrl: "/starlight",
   }
 ];
 

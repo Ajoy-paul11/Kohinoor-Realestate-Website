@@ -56,7 +56,7 @@ export default function SkybladePage() {
         <div className="max-w-7xl mx-auto px-6 pt-10 pb-6">
           {/* Breadcrumb */}
           <p className="text-xs text-neutral-500 tracking-widest uppercase mb-4">
-            Properties &nbsp;/&nbsp; Dubai &nbsp;/&nbsp; Al Jaddaf
+            Properties &nbsp;/&nbsp; Dubai &nbsp;/&nbsp; Downtown Dubai
           </p>
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -65,7 +65,7 @@ export default function SkybladePage() {
                 {skyblade.name}
               </h1>
               <p className="mt-2 text-neutral-400 text-sm tracking-wide">
-                Al Jaddaf · Dubai · {skyblade.category}
+                Downtown Dubai · Dubai · {skyblade.category}
               </p>
             </div>
 
@@ -100,10 +100,10 @@ export default function SkybladePage() {
           {/* Stats row */}
           <div className="mt-6 flex flex-wrap gap-6 text-sm">
             {[
-              { label: "Building", value: "2 Rooms" },
+              { label: "Building", value: "3 Rooms" },
               { label: "Floors", value: "3" },
-              { label: "Total units", value: "1225" },
-              { label: "Developer", value: "Sobha Realty" },
+              { label: "Total units", value: "619" },
+              { label: "Developer", value: "Binghatti Skyblade" },
             ].map(({ label, value }) => (
               <div key={label} className="flex items-center gap-2">
                 <span className="text-neutral-500 text-xs uppercase tracking-widest">

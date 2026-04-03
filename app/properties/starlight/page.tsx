@@ -1,12 +1,12 @@
-import Image from "next/image";
-import central1 from "../../assets/central-1.webp";
+import starlightImg from "../../assets/starlight.webp";
 import LightGallery from "../../components/LightGallery";
-import img1 from "../../assets/images/central/central-1.webp";
-import img2 from "../../assets/images/central/central2.webp";
-import img3 from "../../assets/images/central/central3.webp";
-import img4 from "../../assets/images/central/central4.webp";
-import img5 from "../../assets/images/central/central5.webp";
-import img6 from "../../assets/images/central/central6.webp";
+import img1 from "../../assets/images/starlight/starlight1.webp";
+import img2 from "../../assets/images/starlight/starlight2.webp";
+import img3 from "../../assets/images/starlight/starlight3.webp";
+import img4 from "../../assets/images/starlight/starlight4.webp";
+import img5 from "../../assets/images/starlight/starlight5.webp";
+import img6 from "../../assets/images/starlight/starlight6.webp";
+
 import Link from "next/link";
 
 type Property = {
@@ -23,15 +23,15 @@ type Property = {
   city?: string;
 };
 
-const central: Property = {
-  id: "sobha-central",
-  name: "Sobha Central",
-  location: "Sheikh Zayed Road, Dubai",
-  price: "AED 1,390,000",
-  image: central1.src,
+const starlight: Property = {
+  id: "binghatti-starlight",
+  name: "Binghatti Starlight",
+  location: "Al Jaddaf, Dubai, Al Jaddaf",
+  price: "AED 850,000",
+  image: starlightImg.src,
   beds: 2,
   baths: 2,
-  sqft: 495,
+  sqft: 415,
   type: "sale",
   category: "Apartment",
   city: "Dubai",
@@ -46,7 +46,7 @@ const galleryImages: string[] = [
   img6.src,
 ];
 
-export default function MoonlightPage() {
+export default function StarlightPage() {
   return (
     <main className="min-h-screen bg-[#080808] text-white pt-20">
       {/* ── HERO: Title + meta bar ── */}
@@ -54,16 +54,16 @@ export default function MoonlightPage() {
         <div className="max-w-7xl mx-auto px-6 pt-10 pb-6">
           {/* Breadcrumb */}
           <p className="text-xs text-neutral-500 tracking-widest uppercase mb-4">
-            Properties &nbsp;/&nbsp; Dubai &nbsp;/&nbsp; Sheikh Zayed Road
+            Properties &nbsp;/&nbsp; Dubai &nbsp;/&nbsp; Al Jaddaf
           </p>
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-semibold text-white leading-tight">
-                {central.name}
+                {starlight.name}
               </h1>
               <p className="mt-2 text-neutral-400 text-sm tracking-wide">
-                Sheikh Zayed Road · Dubai · {central.category}
+                Al Jaddaf · Dubai · {starlight.category}
               </p>
             </div>
 
@@ -74,7 +74,7 @@ export default function MoonlightPage() {
                   Starting from
                 </p>
                 <p className="text-3xl font-semibold text-[#cbb58b]">
-                  {central.price}
+                  {starlight.price}
                 </p>
               </div>
               <div className="flex gap-2">
@@ -99,9 +99,9 @@ export default function MoonlightPage() {
           <div className="mt-6 flex flex-wrap gap-6 text-sm">
             {[
               { label: "Building", value: "2 Rooms" },
-              { label: "Floors", value: "3" },
-              { label: "Total units", value: "1225" },
-              { label: "Developer", value: "Sobha Realty" },
+              { label: "Floors", value: "2" },
+              { label: "Total units", value: "510" },
+              { label: "Developer", value: "Binghatti" },
             ].map(({ label, value }) => (
               <div key={label} className="flex items-center gap-2">
                 <span className="text-neutral-500 text-xs uppercase tracking-widest">
@@ -130,63 +130,31 @@ export default function MoonlightPage() {
               <h2 className="text-2xl font-serif">Project Overview</h2>
 
               <p>
-                <strong>Sobha Central</strong> is a landmark mixed-use
-                development by <strong>Sobha Realty</strong>, rising along the
-                prestigious <strong>Sheikh Zayed Road, Dubai</strong>. Offering
-                elegantly designed
-                <strong> 1 & 2 bedroom apartments</strong> starting from{" "}
-                <strong>495 sq. ft.</strong> and priced from
-                <strong> AED 1.39M onwards</strong>, the project promises
-                stunning panoramic views of
-                <strong> Dubai Marina</strong>,{" "}
-                <strong>Bluewaters Island</strong>, and{" "}
-                <strong>Ain Dubai</strong> — bringing skyline and sea view
-                living to your doorstep.
+                <strong>Downtown Frederick hot spot</strong>. Top location for
+                local entertainment. All fixtures are included.{" "}
+                <strong>Liquor license can be included</strong>. Price includes{" "}
+                <strong>
+                  3 leased apartments on the second floor income $2,200 per
+                  month
+                </strong>
+                .
               </p>
+
               <p>
-                Spread across <strong>9.3 acres</strong>, the development
-                features six iconic towers rising up to
-                <strong> G + 75 storeys</strong> with{" "}
-                <strong>1,225 units</strong>, anchored by a
-                <strong> 4-acre master-planned urban park</strong>. Thoughtfully
-                curated amenities include mini golf, cricket, football, private
-                lift, prayer hall, and cinema — every detail crafted to elevate
-                the city lifestyle. With handover scheduled for{" "}
-                <strong>December 2029</strong>, Sobha Central stands as a symbol
-                of modern luxury and architectural brilliance along Dubai's most
-                coveted corridor.
+                <strong>Free standing built out restaurant</strong> with
+                separate dining/banquet room. Spacious outdoor dining deck.{" "}
+                <strong>Large commercial kitchen fully equipped</strong>.
+                Seating capacity over 200 with large event area with stage and
+                movable dance floor. This opportunity is perfect for{" "}
+                <strong>investor or owner operator</strong>. Keep existing
+                concept or introduce your own.
               </p>
 
               <div className="not-prose grid grid-cols-2 md:grid-cols-3 gap-3 my-6">
                 {[
-                  { icon: "🎬", title: "Cinema", sub: "Private screening" },
-                  { icon: "⚽", title: "Football Area", sub: "Sports court" },
                   { icon: "🏋️", title: "Gym", sub: "Fitness center" },
-                  {
-                    icon: "🧘",
-                    title: "Indoor & Outdoor Yoga",
-                    sub: "Yoga area",
-                  },
-                  { icon: "🎭", title: "Indoor Theatre", sub: "Entertainment" },
-                  { icon: "♨️", title: "Jacuzzi", sub: "Relaxation pool" },
-                  {
-                    icon: "🏃",
-                    title: "Jogging Track",
-                    sub: "Running circuit",
-                  },
-                  { icon: "🌊", title: "Kids Pool", sub: "Safe splash zone" },
-                  { icon: "🏊", title: "Lap Pool", sub: "Fitness swimming" },
-                  { icon: "🛟", title: "Leisure Pool", sub: "Resident access" },
-                  {
-                    icon: "🏛️",
-                    title: "MultiPurpose Hall",
-                    sub: "Events & gatherings",
-                  },
-                  {
-                    icon: "🧖",
-                    title: "Steam & Sauna",
-                    sub: "Wellness retreat",
-                  },
+                  { icon: "👶", title: "Kids", sub: "Kids Play Area" },
+                  { icon: "🌊", title: "Pool", sub: "Swimming Pool" },
                 ].map(({ icon, title, sub }) => (
                   <div
                     key={title}
@@ -200,26 +168,6 @@ export default function MoonlightPage() {
                   </div>
                 ))}
               </div>
-
-              {/* <h3 className="text-lg font-semibold mt-6">Location</h3>
-              <p>
-                Situated in <strong>Business Bay</strong> — Dubai's central business and lifestyle
-                district — Aquarise places residents within minutes of the city's most coveted
-                destinations.
-              </p>
-              <div className="not-prose flex flex-wrap gap-3 mt-2 mb-6">
-                {[
-                  ["Burj Khalifa", "5 min"],
-                  ["Dubai Mall", "7 min"],
-                  ["DIFC", "10 min"],
-                  ["Dubai Airport", "20 min"],
-                ].map(([place, time]) => (
-                  <div key={place} className="flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded px-3 py-2 text-sm">
-                    <span className="text-[#cbb58b] font-semibold">{time}</span>
-                    <span className="text-neutral-400">{place}</span>
-                  </div>
-                ))}
-              </div> */}
 
               <h3 className="text-lg font-semibold">Indicative Pricing</h3>
               <div className="not-prose overflow-hidden rounded-lg border border-neutral-800 mt-2">
@@ -235,9 +183,7 @@ export default function MoonlightPage() {
                     {[
                       ["Studio", "On request", "On request"],
                       ["1 BR", "On request", "On request"],
-                      ["2 BR", "1,390,000 AED", "495 sqft"],
-                      ["3 BR", "On request", "On request"],
-                      ["4 BR", "On request", "On request"],
+                      ["2 BR", "850,000 AED", "415 sqft"],
                     ].map(([type, price, size]) => (
                       <tr
                         key={type}
@@ -263,13 +209,13 @@ export default function MoonlightPage() {
               </h4>
               <dl className="space-y-3 text-sm">
                 {[
-                  ["Project", central.name],
-                  ["Developer", "Sobha Realty"],
-                  ["Location", "Sheikh Zayed Road, Dubai"],
+                  ["Project", starlight.name],
+                  ["Developer", "starlight"],
+                  ["Location", "Al Jaddaf, Dubai, Al Jaddaf"],
                   ["Building type", "2 Rooms Apartments"],
-                  ["Buildings", "3"],
-                  ["Total units", "1225"],
-                  ["Property size", "495 ft²"],
+                  ["Buildings", "2"],
+                  ["Total units", "510"],
+                  ["Property size", "415 ft²"],
                 ].map(([label, value]) => (
                   <div
                     key={label}
@@ -288,20 +234,7 @@ export default function MoonlightPage() {
                 Features
               </h4>
               <ul className="space-y-2 text-sm text-neutral-300">
-                {[
-                  "Cinema",
-                  "Football Area",
-                  "Gym",
-                  "Indoor & Outdoor Yoga Area",
-                  "Indoor Theatre",
-                  "Jacuzzi",
-                  "Jogging Track",
-                  "Kids Pool",
-                  "Lap Pool",
-                  "Leisure Pool",
-                  "MultiPurpose Hall",
-                  "Steam & Sauna",
-                ].map((f) => (
+                {["Gym", "Kids Play Area", "Swimming Pool"].map((f) => (
                   <li key={f} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#cbb58b] shrink-0" />
                     {f}
