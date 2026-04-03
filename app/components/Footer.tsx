@@ -74,12 +74,12 @@ function Footer() {
               <ul className="flex flex-col gap-4 text-sm text-[#b0b0b0]">
                 <li className="flex items-center gap-3">
                   <PhoneCall size={16} />
-                  <span>+91 9876543210</span>
+                  <span>+97142957104</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Mail size={16} />
-                  <span>kohinoorrealty@gmail.com</span>
+                  <span>info@kohinoorrealestate.ae</span>
                 </li>
 
                 <li className="flex items-center gap-3">
@@ -103,15 +103,27 @@ function Footer() {
 
           {/* SOCIAL */}
           <div className="flex gap-6 text-[#b0b0b0]">
-            <a href="#" className="hover:text-white transition">
+            <Link
+              href="https://www.facebook.com/p/Kohinoor-Real-Estate-LLC-61572219759740/"
+              target="_blank"
+              className="hover:text-white transition"
+            >
               <Facebook />
-            </a>
-            <a href="#" className="hover:text-white transition">
+            </Link>
+            <Link
+              href="https://www.instagram.com/kohinoorrealestatellc/"
+              target="_blank"
+              className="hover:text-white transition"
+            >
               <Instagram />
-            </a>
-            <a href="#" className="hover:text-white transition">
+            </Link>
+            <Link
+              href="https://ae.linkedin.com/in/kohinoor-real-estate-l-l-c-166486340"
+              target="_blank"
+              className="hover:text-white transition"
+            >
               <Linkedin />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

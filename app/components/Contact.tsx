@@ -57,13 +57,7 @@ const Contact = () => {
       setIsSubmitting(true);
       console.log(data);
 
-      // const formBody = new URLSearchParams(data as any).toString();
-
       await fetch("https://api.web3forms.com/submit", {
-        // mode: "no-cors",
-        // headers: {
-        //   "Content-Type": "application/x-www-form-urlencoded",
-        // },
         method: "POST",
         headers: {
           "Content-Type": "application/json",
